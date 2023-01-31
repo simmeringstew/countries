@@ -1,10 +1,10 @@
 @import url('https://api.fonts.coollabs.io/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 :root {
-  --clr-light-text: hsl(200, 15%, 8%);
-  --clr-light-input: hsl(0, 0%, 52%);
-  --clr-light-background: hsl(0, 0%, 98%);
-  --clr-light-elements-dark-text: hsl(0, 0%, 100%);
+  --clr-text: hsl(200, 15%, 8%);
+  --clr-input: hsl(0, 0%, 52%);
+  --clr-background: hsl(0, 0%, 98%);
+  --clr-elements: hsl(0, 0%, 100%);
 }
 
 *, *::before, *::after {
@@ -40,8 +40,8 @@ body {
   font-weight: 300;
   line-height: 1.6;
   text-rendering: optimizeSpeed;
-  color: var(--clr-light-text);
-  background-color: var(--clr-light-background);
+  color: var(--clr-text);
+  background-color: var(--clr-background);
 }
 
 h1, h2, h3, h4, h5, h6 {
