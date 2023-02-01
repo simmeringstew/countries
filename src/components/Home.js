@@ -8,6 +8,8 @@ const Home = () => {
 
     const [countries, setCountries] = useState([...data]);
     const [search, setSearch] = useState("");
+    const [option, setOption] = useState("default");
+
     const nameSort = (value) => {
         if (value === "") {
             setCountries([...data]);
@@ -18,9 +20,13 @@ const Home = () => {
         setSearch(value);
     }
 
+    const filter = (value) => {
+
+    }
+
     return (
         <div className="home">
-        <Sort search={search} nameSort={nameSort} />
+        <Sort search={search} nameSort={nameSort} filter={filter} />
             <div className="cards container">
             {countries.map(country =>
             <CountryCard key={country.numericCode} country={country} />

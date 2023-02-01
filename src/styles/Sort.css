@@ -1,0 +1,55 @@
+.sort {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box > input, .select {
+    border: transparent;
+    background-color: var(--clr-elements);
+    color: var(--clr-text);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.search-box > input {
+    width: 100%;
+    padding: 1rem;
+    padding-left: 3rem;
+}
+
+.search-box > input:focus, .select:focus {
+    outline-color: var(--clr-text);
+    outline: 2px solid;
+}
+
+.search-box > svg {
+    fill: var(--clr-text);
+    position: absolute;
+    width: auto;
+    top: 50%;
+    transform: translate(100%, -50%);
+}
+
+.select {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+@media screen and (min-width: 992px) {
+    .sort {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .search-box > input {
+        width: 200%;
+    }
+    .select {
+        width: 20%;
+    }
+}
