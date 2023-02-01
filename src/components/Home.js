@@ -4,7 +4,7 @@ import Sort from "./Sort";
 import CountryCard from "./CountryCard";
 import "../styles/Home.css";
 
-const Home = () => {
+const Home = ({ updateCountry }) => {
 
     const [countries, setCountries] = useState([...data]);
     const [search, setSearch] = useState("");
@@ -59,7 +59,7 @@ const Home = () => {
         <Sort search={search} nameSort={nameSort} filter={filter} />
             <div className="cards container">
             {countries.map(country =>
-            <CountryCard key={country.numericCode} country={country} />
+            <CountryCard key={country.numericCode} country={country} updateCountry={updateCountry} />
             )}
             </div>
         </div>

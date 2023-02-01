@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "../styles/CountryCard.css";
 
-const CountryCard = ({ country }) => {
+const CountryCard = ({ country, updateCountry }) => {
 
     const handleClick = () => {
-
+        updateCountry({...country});
     }
 
     return (
