@@ -20,11 +20,11 @@ const Sort = ({ search, nameSort, filter }) => {
             </div>
             <select className="select" onChange={e => handleChange(e)}>
                 <option value="default">Filter by Region</option>
-                <option value="africa">Africa</option>
-                <option value="americas">Americas</option>
-                <option value="asia">Asia</option>
-                <option value="europe">Europe</option>
-                <option value="oceania">Oceania</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
             </select>
         </div>
     );

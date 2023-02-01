@@ -12,16 +12,46 @@ const Home = () => {
 
     const nameSort = (value) => {
         if (value === "") {
-            setCountries([...data]);
+            const copy = [...data];
+            if (option !== "default") {
+                setCountries(copy.filter(country => country.region === option));
+                setSearch("");
+                return;
+            }
+            setCountries(copy);
             setSearch("");
             return;
         }
-        setCountries(data.filter(country => country.name.toLowerCase().match(value.toLowerCase())));
+        const filtered = data.filter(country => country.name.toLowerCase().match(value.toLowerCase()));
+        if (option !== "default") {
+            setCountries(filtered.filter(country => country.region === option));
+            setSearch(value);
+            return;
+        }
+        setCountries(filtered);
         setSearch(value);
     }
 
     const filter = (value) => {
-
+        if (value === "default") {
+            const copy = [...data];
+            if (search !== "") {
+                setCountries(copy.filter(country => country.name.toLowerCase().match(search.toLowerCase())));
+                setOption("default");
+                return;
+            }
+            setCountries(copy);
+            setOption("default");
+            return;
+        }
+        const filtered = data.filter(country => country.region === value);
+        if (search !== "") {
+            setCountries(filtered.filter(country => country.name.toLowerCase().match(search.toLowerCase())));
+            setOption(value);
+            return;
+        }
+        setCountries(filtered);
+        setOption(value);
     }
 
     return (
