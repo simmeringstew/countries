@@ -63,16 +63,16 @@ const SpecificCountry = ({ country, updateCountry }) => {
                         <h2 className="country-name">{country.name}</h2>
                         <div className="country-lists">
                             <ul>
-                                <li><span className="bold">Native Name:</span> {country.nativeName}</li>
-                                <li><span className="bold">Population:</span> {country.population.toLocaleString()}</li>
-                                <li><span className="bold">Region:</span> {country.region}</li>
-                                <li><span className="bold">Sub Region:</span> {country.subregion}</li>
-                                <li><span className="bold">Capital:</span> {country.capital}</li>
+                                <li data-testid="nativeName"><span className="bold">Native Name:</span> {country.nativeName}</li>
+                                <li data-testid="population"><span className="bold">Population:</span> {country.population.toLocaleString()}</li>
+                                <li data-testid="region"><span className="bold">Region:</span> {country.region}</li>
+                                <li data-testid="subRegion"><span className="bold">Sub Region:</span> {country.subregion}</li>
+                                <li data-testid="capital"><span className="bold">Capital:</span> {country.capital}</li>
                             </ul>
                             <ul>
-                                <li><span className="bold">Top Level Domain:</span> {country.topLevelDomain}</li>
-                                <li><span className="bold">Currencies:</span> {currencies}</li>
-                                <li><span className="bold">Languages:</span> {languages}</li>
+                                <li data-testid="topLevelDomain"><span className="bold">Top Level Domain:</span> {country.topLevelDomain}</li>
+                                <li data-testid="currencies"><span className="bold">Currencies:</span> {currencies}</li>
+                                <li data-testid="languages"><span className="bold">Languages:</span> {languages}</li>
                             </ul>
                         </div>
                         <h3 className="border-title">Border Countries:</h3>
@@ -101,16 +101,16 @@ const SpecificCountry = ({ country, updateCountry }) => {
                         <h2 className="country-name">{country.name}</h2>
                         <div className="country-lists">
                             <ul>
-                                <li><span className="bold">Native Name:</span> {country.nativeName}</li>
-                                <li><span className="bold">Population:</span> {country.population.toLocaleString()}</li>
-                                <li><span className="bold">Region:</span> {country.region}</li>
-                                <li><span className="bold">Sub Region:</span> {country.subregion}</li>
-                                <li><span className="bold">Capital:</span> {country.capital}</li>
+                                <li data-testid="nativeName"><span className="bold">Native Name:</span> {country.nativeName}</li>
+                                <li data-testid="population"><span className="bold">Population:</span> {country.population.toLocaleString()}</li>
+                                <li data-testid="region"><span className="bold">Region:</span> {country.region}</li>
+                                <li data-testid="subRegion"><span className="bold">Sub Region:</span> {country.subregion}</li>
+                                <li data-testid="capital"><span className="bold">Capital:</span> {country.capital}</li>
                             </ul>
                             <ul>
-                                <li><span className="bold">Top Level Domain:</span> {country.topLevelDomain}</li>
-                                <li><span className="bold">Currencies:</span> {currencies}</li>
-                                <li><span className="bold">Languages:</span> {languages}</li>
+                                <li data-testid="topLevelDomain"><span className="bold">Top Level Domain:</span> {country.topLevelDomain}</li>
+                                <li data-testid="currencies"><span className="bold">Currencies:</span> {currencies}</li>
+                                <li data-testid="languages"><span className="bold">Languages:</span> {languages}</li>
                             </ul>
                         </div>
                     </div>
