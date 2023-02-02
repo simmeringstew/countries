@@ -35,6 +35,10 @@ h2 {
 }
 
 @media screen and (min-width: 768px) {
+    .card {
+        height: 22rem;
+    }
+    
     .card-link {
         width: 100%;
     }
