@@ -21,7 +21,7 @@ const App = () => {
         <TopBar mode={mode} updateMode={updateMode} />
             <Routes>
               <Route path="/" element={<Home updateCountry={updateCountry} />} />
-              <Route path="/:country" element={<SpecificCountry country={currentCountry} />} />
+              <Route path="/:country" element={<SpecificCountry country={currentCountry} updateCountry={updateCountry} />} />
             </Routes>
         </BrowserRouter>
     );

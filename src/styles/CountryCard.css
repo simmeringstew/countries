@@ -21,7 +21,7 @@
     border-top-right-radius: 8px;
 }
 
-h2, ul {
+.margin {
     margin-left: 1rem !important;
     color: var(--clr-text);
 }

@@ -1,0 +1,31 @@
+.specific-country {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.country-name {
+    font-size: 1.5rem;
+}
+
+.back {
+    position: relative;
+    background-color: var(--clr-elements);
+    width: fit-content;
+    padding: 0.2rem 2rem;
+    color: var(--clr-text);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.back > svg {
+    position: absolute;
+    width: auto;
+    top: 50%;
+    transform: translate(-150%, -50%);
+}
+
+.border-title {
+    font-size: 1.2rem;
+}
