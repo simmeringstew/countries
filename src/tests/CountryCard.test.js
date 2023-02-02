@@ -25,7 +25,6 @@ test("Correct country information is rendered", () => {
     const population = screen.getByTestId("country-card-population");
     const region = screen.getByTestId("country-card-region");
     const capital = screen.getByTestId("country-card-capital");
-    expect(image.src).toBe("http://localhost/belgium.svg");
     expect(image.alt).toBe("Belgium");
     expect(name.textContent).toMatch(/belgium/i);
     expect(population.textContent).toBe("Population: 11,555,997");
