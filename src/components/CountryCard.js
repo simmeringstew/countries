@@ -13,7 +13,7 @@ const CountryCard = ({ country, updateCountry }) => {
                 <img src={country.flags.svg} alt={country.name} />
                 <h2 className="margin">{country.name}</h2>
                 <ul className="margin">
-                    <li data-testid="country-card-population"><span className="bold">Population:</span> {country.population}</li>
+                    <li data-testid="country-card-population"><span className="bold">Population:</span> {country.population.toLocaleString()}</li>
                     <li data-testid="country-card-region"><span className="bold">Region:</span> {country.region}</li>
                     <li data-testid="country-card-capital"><span className="bold">Capital:</span> {country.capital}</li>
                 </ul>

@@ -64,7 +64,7 @@ const SpecificCountry = ({ country, updateCountry }) => {
                         <div className="country-lists">
                             <ul>
                                 <li><span className="bold">Native Name:</span> {country.nativeName}</li>
-                                <li><span className="bold">Population:</span> {country.population}</li>
+                                <li><span className="bold">Population:</span> {country.population.toLocaleString()}</li>
                                 <li><span className="bold">Region:</span> {country.region}</li>
                                 <li><span className="bold">Sub Region:</span> {country.subregion}</li>
                                 <li><span className="bold">Capital:</span> {country.capital}</li>
@@ -102,7 +102,7 @@ const SpecificCountry = ({ country, updateCountry }) => {
                         <div className="country-lists">
                             <ul>
                                 <li><span className="bold">Native Name:</span> {country.nativeName}</li>
-                                <li><span className="bold">Population:</span> {country.population}</li>
+                                <li><span className="bold">Population:</span> {country.population.toLocaleString()}</li>
                                 <li><span className="bold">Region:</span> {country.region}</li>
                                 <li><span className="bold">Sub Region:</span> {country.subregion}</li>
                                 <li><span className="bold">Capital:</span> {country.capital}</li>

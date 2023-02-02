@@ -28,7 +28,7 @@ test("Correct country information is rendered", () => {
     expect(image.src).toBe("http://localhost/belgium.svg");
     expect(image.alt).toBe("Belgium");
     expect(name.textContent).toMatch(/belgium/i);
-    expect(population.textContent).toBe("Population: 11555997");
+    expect(population.textContent).toBe("Population: 11,555,997");
     expect(region.textContent).toMatch(/region: europe/i);
     expect(capital.textContent).toMatch(/capital: brussels/i);
 });
