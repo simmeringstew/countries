@@ -49,7 +49,7 @@ const TopBar = ({ mode, updateMode }) => {
                 <h1>Where in the World?</h1>
                 <button type="button" aria-label="Toggle light/dark mode" className="toggle-button" onClick={handleClick}>
                     <img src="./images/moon.svg" alt="" className="mode-icon" />
-                    <span className="mode">{mode}</span>
+                    <span className="mode" data-testid="mode">{mode}</span>
                 </button>
             </header>
         </div>
