@@ -46,7 +46,7 @@ const SpecificCountry = ({ country, updateCountry }) => {
         else {
             setCurrencies(currenciesHolder.join(", "));
         }
-    }, []);
+    }, [country]);
 
     if (borderCountries.length !== 0) {
         return(
