@@ -7,23 +7,10 @@ import "../styles/SpecificCountry.css";
 
 const SpecificCountry = ({ country, updateCountry }) => {
 
-    console.log(country);
-
     const [currencies, setCurrencies] = useState(undefined);
     const [languages, setLanguages] = useState(undefined);
     const [borderCountries, setBorderCountries] = useState([]);
     useEffect(() => {
-        const currenciesHolder = [];
-        for (let i = 0; i < country.currencies.length; i++) {
-            currenciesHolder.push(country.currencies[i].name);
-        }
-        if (currenciesHolder.length === 1) {
-            setCurrencies(currenciesHolder[0]);
-        }
-        else {
-            setCurrencies(currenciesHolder.join(", "));
-        }
-
         const languagesHolder = [];
         for (let i = 0; i < country.languages.length; i++) {
             languagesHolder.push(country.languages[i].name);
@@ -48,6 +35,17 @@ const SpecificCountry = ({ country, updateCountry }) => {
             }
             setBorderCountries([...borderCountriesHolder]);
         }
+
+        const currenciesHolder = [];
+        for (let i = 0; i < country.currencies.length; i++) {
+            currenciesHolder.push(country.currencies[i].name);
+        }
+        if (currenciesHolder.length === 1) {
+            setCurrencies(currenciesHolder[0]);
+        }
+        else {
+            setCurrencies(currenciesHolder.join(", "));
+        }
     }, []);
 
     if (borderCountries.length !== 0) {
@@ -59,25 +57,31 @@ const SpecificCountry = ({ country, updateCountry }) => {
                     </svg>
                     <span>Back</span>
                 </Link>
-                <img src={country.flags.svg} alt={country.name} />
-                <h2 className="country-name">{country.name}</h2>
-                <ul>
-                    <li><span className="bold">Native Name:</span> {country.nativeName}</li>
-                    <li><span className="bold">Population:</span> {country.population}</li>
-                    <li><span className="bold">Region:</span> {country.region}</li>
-                    <li><span className="bold">Sub Region:</span> {country.subregion}</li>
-                    <li><span className="bold">Capital:</span> {country.capital}</li>
-                </ul>
-                <ul>
-                    <li><span className="bold">Top Level Domain:</span> {country.topLevelDomain}</li>
-                    <li><span className="bold">Currencies:</span> {currencies}</li>
-                    <li><span className="bold">Languages:</span> {languages}</li>
-                </ul>
-                <h3 className="border-title">Border Countries:</h3>
-                <div className="border-links">
-                    {borderCountries.map(country =>
-                    <BorderCountry key={country.id} country={country} updateCountry={updateCountry} />
-                    )}
+                <div className="country-data">
+                    <img src={country.flags.svg} alt={country.name} />
+                    <div className="country-data-text">
+                        <h2 className="country-name">{country.name}</h2>
+                        <div className="country-lists">
+                            <ul>
+                                <li><span className="bold">Native Name:</span> {country.nativeName}</li>
+                                <li><span className="bold">Population:</span> {country.population}</li>
+                                <li><span className="bold">Region:</span> {country.region}</li>
+                                <li><span className="bold">Sub Region:</span> {country.subregion}</li>
+                                <li><span className="bold">Capital:</span> {country.capital}</li>
+                            </ul>
+                            <ul>
+                                <li><span className="bold">Top Level Domain:</span> {country.topLevelDomain}</li>
+                                <li><span className="bold">Currencies:</span> {currencies}</li>
+                                <li><span className="bold">Languages:</span> {languages}</li>
+                            </ul>
+                        </div>
+                        <h3 className="border-title">Border Countries:</h3>
+                        <div className="border-links">
+                            {borderCountries.map(country =>
+                            <BorderCountry key={country.id} country={country} updateCountry={updateCountry} />
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
         );
@@ -91,20 +95,26 @@ const SpecificCountry = ({ country, updateCountry }) => {
                     </svg>
                     <span>Back</span>
                 </Link>
-                <img src={country.flags.svg} alt={country.name} />
-                <h2 className="country-name">{country.name}</h2>
-                <ul>
-                    <li><span className="bold">Native Name:</span> {country.nativeName}</li>
-                    <li><span className="bold">Population:</span> {country.population}</li>
-                    <li><span className="bold">Region:</span> {country.region}</li>
-                    <li><span className="bold">Sub Region:</span> {country.subregion}</li>
-                    <li><span className="bold">Capital:</span> {country.capital}</li>
-                </ul>
-                <ul>
-                    <li><span className="bold">Top Level Domain:</span> {country.topLevelDomain}</li>
-                    <li><span className="bold">Currencies:</span> {currencies}</li>
-                    <li><span className="bold">Languages:</span> {languages}</li>
-                </ul>
+                <div className="country-data">
+                    <img src={country.flags.svg} alt={country.name} />
+                    <div className="country-data-text">
+                        <h2 className="country-name">{country.name}</h2>
+                        <div className="country-lists">
+                            <ul>
+                                <li><span className="bold">Native Name:</span> {country.nativeName}</li>
+                                <li><span className="bold">Population:</span> {country.population}</li>
+                                <li><span className="bold">Region:</span> {country.region}</li>
+                                <li><span className="bold">Sub Region:</span> {country.subregion}</li>
+                                <li><span className="bold">Capital:</span> {country.capital}</li>
+                            </ul>
+                            <ul>
+                                <li><span className="bold">Top Level Domain:</span> {country.topLevelDomain}</li>
+                                <li><span className="bold">Currencies:</span> {currencies}</li>
+                                <li><span className="bold">Languages:</span> {languages}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

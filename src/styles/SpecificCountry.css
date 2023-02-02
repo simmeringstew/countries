@@ -27,6 +27,24 @@
     fill: var(--clr-text);
 }
 
+.country-data {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.country-data-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.country-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .border-title {
     font-size: 1.2rem;
 }
@@ -38,6 +56,18 @@
 }
 
 @media screen and (min-width: 992px) {
+    .country-data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .country-lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     .border-links {
         grid-template-columns: repeat(3, 1fr);
     }
