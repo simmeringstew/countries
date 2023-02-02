@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import data from "../data.json";
+import "../styles/BorderCountry.css";
 
 const BorderCountry = ({ country, updateCountry }) => {
 

@@ -24,8 +24,27 @@
     width: auto;
     top: 50%;
     transform: translate(-150%, -50%);
+    fill: var(--clr-text);
 }
 
 .border-title {
     font-size: 1.2rem;
+}
+
+.border-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .border-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .border-links {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
