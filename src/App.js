@@ -20,8 +20,8 @@ const App = () => {
         <BrowserRouter>
         <TopBar mode={mode} updateMode={updateMode} />
             <Routes>
-              <Route path="/" element={<Home updateCountry={updateCountry} />} />
-              <Route path="/:country" element={<SpecificCountry country={currentCountry} updateCountry={updateCountry} />} />
+              <Route path="/countries" element={<Home updateCountry={updateCountry} />} />
+              <Route path="/countries/:country" element={<SpecificCountry country={currentCountry} updateCountry={updateCountry} />} />
             </Routes>
         </BrowserRouter>
     );

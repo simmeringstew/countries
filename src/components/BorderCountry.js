@@ -10,7 +10,7 @@ const BorderCountry = ({ country, updateCountry }) => {
     }
 
     return(
-        <Link to={`/${country.name}`} className="country-fake-button" onClick={handleClick}>
+        <Link to={`/countries/${country.name}`} className="country-fake-button" onClick={handleClick}>
             {country.name}
         </Link>
     );

@@ -8,7 +8,7 @@ const CountryCard = ({ country, updateCountry }) => {
     }
 
     return (
-        <Link to={`/${country.name}`} onClick={handleClick} className="card-link">
+        <Link to={`/countries/${country.name}`} onClick={handleClick} className="card-link">
             <div className="card">
                 <img src={country.flags.svg} alt={country.name} />
                 <h2 className="margin">{country.name}</h2>
